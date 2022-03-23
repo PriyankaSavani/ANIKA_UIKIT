@@ -1,0 +1,33 @@
+// 
+// _footer.scss
+// 
+
+.ap__footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: $ap__leftbar-width;
+    padding: 20px 15px 20px;    
+    color: $ap__footer-color;
+    background-color: $ap__footer-bg;
+    .ap__footer-links {
+        a {
+            color: $ap__footer-color;
+            margin-left: 1.5rem;
+            transition: all .4s;
+            &:hover {
+                color: $ap__footer-link-hover-color;
+            }
+            &:first-of-type {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .ap__footer {
+        left: 0 !important;
+        text-align: center;
+    }
+}

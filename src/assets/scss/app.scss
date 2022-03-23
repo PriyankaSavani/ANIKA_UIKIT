@@ -1,0 +1,21 @@
+// 
+// app.scss
+// 
+
+// Prefix for :root CSS variables
+$variable-prefix: "ap-";
+
+// FONTS
+@import "custom/fonts/fonts";
+
+// BOOTSTRAP AND OTHER VARIABLE FILES
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "variables";
+@import "custom-variables";
+@import "light-mode";
+@import "dark-mode";
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+// STRUCTURE
+@import "./custom/structure/footer";
