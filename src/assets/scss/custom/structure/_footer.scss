@@ -3,20 +3,20 @@
 // 
 
 .ap__footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
-    left: $ap__leftbar-width;
+    left: $leftbar-width;
     padding: 20px 15px 20px;    
-    color: $ap__footer-color;
-    background-color: $ap__footer-bg;
+    color: $footer-color;
+    background-color: $footer-bg;
     .ap__footer-links {
         a {
-            color: $ap__footer-color;
+            color: $footer-color;
             margin-left: 1.5rem;
             transition: all .4s;
             &:hover {
-                color: $ap__footer-link-hover-color;
+                color: $footer-link-hover-color;
             }
             &:first-of-type {
                 margin-left: 0;

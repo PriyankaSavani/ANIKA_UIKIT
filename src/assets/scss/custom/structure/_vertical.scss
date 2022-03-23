@@ -1,0 +1,158 @@
+// 
+// _vertical.scss
+// 
+
+#ap__wrapper {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+// CONTENT PAGE
+.ap__content-page {
+    overflow: hidden;
+    margin-left: $leftbar-width;
+    margin-top: $topbar-height;
+    min-height: 80vh;
+    padding: 0 12px 65px 12px;
+}
+
+// SIDEMENU
+.ap__left-side-menu {
+    position: fixed;
+    top: $topbar-height;
+    bottom: 0;
+    width: $leftbar-width;
+    background: $bg-leftbar;
+    box-shadow: $box-shadow;
+    padding: 20px 0;
+    transition: all .1s ease-out;
+
+    #ap__sidebar-menu {
+        >ul {            
+            list-style: none;
+            padding: 0;
+
+            >li {
+                >a {
+                    position: relative;
+                    display: block;
+                    padding: 12px 20px;
+                    transition: all 0.4s;
+                    font-family: $font-family-secondary;
+                    font-size: $menu-item-size;
+                    color: $menu-item;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: $menu-item-hover;
+                        text-decoration: none;
+                    }
+
+                    >span {
+                        vertical-align: middle;
+                    }
+
+                    i {
+                        display: inline-block;
+                        line-height: 1.0625rem;
+                        margin: 0 7px 0 3px;
+                        text-align: center;
+                        vertical-align: middle;
+                        width: 16px;
+                        font-size: 1rem;
+                    }
+                }
+                ul {
+                    padding-left: 34px;
+                    list-style: none;
+    
+                    ul {
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .badge {
+            margin-top: 4px;
+        }
+
+        .ap__menu-title {
+            padding: 10px 20px;
+            letter-spacing: .05em;
+            pointer-events: none;
+            cursor: default;
+            text-transform: uppercase;
+            color: $menu-item;
+            font-size: $menu-title-size;
+            font-weight: $label-font-weight;
+        }
+
+        .ap__menuitem-active {
+            > a {
+                color: $menu-item-active;
+            }
+    
+            .ap__active {
+                color: $menu-item-active;
+            }
+        }
+    }
+
+    .ap__nav-second-level {
+        li {
+            a {
+                padding: 8px 20px;
+                display: block;
+                position: relative;
+                transition: all 0.4s;
+                color: $menu-item;
+                font-size: $menu-sub-item-size;
+    
+                &:focus,
+                &:hover {
+                    color: $menu-item-hover;
+                }
+            }
+    
+            &.ap__active {
+                >a {
+                    color: $menu-item-active;
+                }
+            }
+        }
+    }
+
+    .ap__menu-arrow {
+        position: absolute;
+        display: inline-block;
+        right: 20px;
+        font-family: 'bootstrap-icons';
+        text-rendering: auto;
+        line-height: $line-height-base;
+        font-size: $h6-font-size;
+        transition: transform .15s;
+        transform: translate(0, 0);
+
+        &:before {
+            content: "\f285";
+        }
+    }
+
+    li{
+        >a[aria-expanded="true"] {
+            > span.ap__menu-arrow {
+                transform: rotate(90deg);
+            }
+        }
+        &.ap__menuitem-active {
+            > a:not(.collapsed) {
+                > span.ap__menu-arrow {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+}

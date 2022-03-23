@@ -8,6 +8,8 @@ import { LayoutTypes } from '../constants';
 // UTILS
 import { changeBodyAttribute } from '../utils';
 
+// code splitting and lazy loading
+const LeftSidebar = React.lazy(() => import('./LeftSidebar'));
 const Footer = React.lazy(() => import('./Footer'));
 
 const loading = () => <div className=""></div>;
@@ -25,7 +27,7 @@ const VerticalLayout = () => {
 
                 </Suspense>
                 <Suspense fallback={loading()}>
-
+                    <LeftSidebar />
                 </Suspense>
                 <div className="ap__content-page">
                     <div className="ap__content">

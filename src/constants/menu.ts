@@ -19,10 +19,39 @@ const MENU_ITEMS: MenuItemTypes[] = [
         key: 'dashboard',
         label: 'Dashboard',
         isTitle: false,
-        icon: 'mdi mdi-view-dashboard-outline',
+        icon: 'bi-house-door',
         badge: { variant: 'success', text: '9+' },
         url: '/dashboard',
     },
+    { key: 'components', label: 'Components', isTitle: true},
+    {
+        key: 'base-ui',
+        label: 'Base UI',
+        isTitle: false,
+        icon: 'bi-box',
+        children: [
+            {
+                key: 'base-ui-buttons',
+                label: 'Buttons',
+                url: '/base-ui/buttons',
+                parentKey: 'base-ui',
+            },
+        ],
+    },
+    {
+        key: 'extended-ui',
+        label: 'Extended UI',
+        isTitle: false,
+        icon: 'bi-box2',
+        children: [
+            {
+                key: 'base-ui-buttons',
+                label: 'Buttons',
+                url: '/base-ui/buttons',
+                parentKey: 'base-ui',
+            },
+        ],
+    }
 ];
 
 export { MENU_ITEMS };

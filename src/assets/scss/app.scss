@@ -18,4 +18,5 @@ $variable-prefix: "ap-";
 @import "./node_modules/bootstrap/scss/bootstrap";
 
 // STRUCTURE
+@import "./custom/structure/vertical";
 @import "./custom/structure/footer";
